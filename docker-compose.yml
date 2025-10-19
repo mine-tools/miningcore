@@ -32,7 +32,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Production
     volumes:
-      - ./app/:/app/
+      - ./app/config.json:/app/config.json
     command: ["dotnet", "Miningcore.dll", "-c", "config.json"]
     ports:
       - "4000:4000"   # Stratum
